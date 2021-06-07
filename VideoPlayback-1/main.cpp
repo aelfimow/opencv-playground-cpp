@@ -11,7 +11,9 @@ int main(int argc, char* argv[])
 
     std::string const filename { argv[1] };
 
-    cv::namedWindow("VideoPlayback-1", cv::WINDOW_AUTOSIZE);
+    std::string const windowName { "VideoPlayback-1" };
+
+    cv::namedWindow(windowName, cv::WINDOW_AUTOSIZE);
 
     cv::VideoCapture cap;
     cap.open(filename);
@@ -28,12 +30,12 @@ int main(int argc, char* argv[])
 
         if (not finished)
         {
-            cv::imshow("VideoPlayback-1", frame);
+            cv::imshow(windowName, frame);
             finished = (cv::waitKey(33) >= 0);
         }
     }
 
-    cv::destroyWindow("VideoPlayback-1");
+    cv::destroyWindow(windowName);
 
     return EXIT_SUCCESS;
 }
