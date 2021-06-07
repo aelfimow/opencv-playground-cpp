@@ -15,12 +15,14 @@ int main(int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
-    cv::namedWindow("LoadImageFile-1", cv::WINDOW_AUTOSIZE);
-    cv::imshow("LoadImageFile-1", img);
+    std::string const windowName { "LoadImageFile-1" };
+
+    cv::namedWindow(windowName, cv::WINDOW_AUTOSIZE);
+    cv::imshow(windowName, img);
 
     cv::waitKey(0);
 
-    cv::destroyWindow("LoadImageFile-1");
+    cv::destroyWindow(windowName);
 
     return EXIT_SUCCESS;
 }
