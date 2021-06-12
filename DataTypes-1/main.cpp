@@ -111,6 +111,21 @@ static void Sizes()
     }
 }
 
+static void Rects()
+{
+    {
+        cv::Rect r;
+    }
+    {
+        cv::Rect2i r1;
+        cv::Rect2f r2;
+        cv::Rect2d r3;
+    }
+    {
+        cv::RotatedRect r;
+    }
+}
+
 int main(int argc, char* argv[])
 {
     Vectors();
@@ -118,6 +133,7 @@ int main(int argc, char* argv[])
     Points();
     Scalars();
     Sizes();
+    Rects();
 
     return EXIT_SUCCESS;
 }
