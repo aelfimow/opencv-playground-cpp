@@ -93,11 +93,31 @@ static void Points()
     }
 }
 
+static void Scalars()
+{
+    cv::Scalar s;
+}
+
+static void Sizes()
+{
+    {
+        cv::Size s;
+    }
+    {
+        cv::Size2i s1;
+        cv::Size2l s2;
+        cv::Size2f s3;
+        cv::Size2d s4;
+    }
+}
+
 int main(int argc, char* argv[])
 {
     Vectors();
     Matrix();
     Points();
+    Scalars();
+    Sizes();
 
     return EXIT_SUCCESS;
 }
