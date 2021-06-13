@@ -126,6 +126,12 @@ static void Rects()
     }
 }
 
+static void Complex()
+{
+    cv::Complexf z1;
+    cv::Complexd z2;
+}
+
 int main(int argc, char* argv[])
 {
     Vectors();
@@ -134,6 +140,7 @@ int main(int argc, char* argv[])
     Scalars();
     Sizes();
     Rects();
+    Complex();
 
     return EXIT_SUCCESS;
 }
